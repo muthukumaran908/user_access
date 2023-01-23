@@ -55,16 +55,16 @@ sample input
 http://localhost:8839/users/kumaran3853@gmail.com
 
 Sample output
-Status:1,
-Msg:’documents were deleted successfully’
+{Status:1,
+Msg:’documents were deleted successfully’}
 
 
 
 If any mandatory inputs are missing
 
 Output:
-Status:1,
-Msg:’insufficient inputs….’’
+{Status:1,
+Msg:’insufficient inputs….’}
 
 
 
