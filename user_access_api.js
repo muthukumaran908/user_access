@@ -21,14 +21,11 @@ app.post('/users', (req, res) => {
         if (valid_mail == true) {
             async function run() {
                 try {
-                    //to save dob in standard format
-                    let dateofbirth = new Date(
-                        `${date.split('/')[2]}-${date.split('/')[0]}-${date.split('/')[1]}`,
-                    );
+                  
                     let docs = {
                         'name': name,
                         'email': email,
-                        'dob': dateofbirth
+                        'dob': date
                     }
                     //mongo query for insert
                     await user_details.insertOne(docs);
