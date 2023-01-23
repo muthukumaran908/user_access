@@ -104,10 +104,9 @@ app.delete('/users/:email_id', (req, res) => {
                 }, (err, collection) => {
                     if (err) throw err;
                     else {
-                        res.status(500).json({
+                        res.status(200).json({
                             status: 1,
-                            msg: 'records deleted successfully',
-                            data: collection.result
+                            msg: 'records deleted successfully'
                         })
                     }
                 });
