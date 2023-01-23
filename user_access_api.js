@@ -63,6 +63,7 @@ app.get('/users/:email_id', (req, res) => {
         var email = req.params.email_id
         async function run() {
             try {
+                //query to search
                 await user_details.find({
                     email: email
                 }).exec(err, data => {
@@ -100,6 +101,7 @@ app.delete('/users/:email_id', (req, res) => {
         var email = req.params.email_id
         async function run() {
             try {
+                //query to delete
                 await user_details.deleteOne({
                     email: email
                 }, (err, collection) => {
